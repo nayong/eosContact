@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.nayong.eoscontact.DetailActivity">
+
+    <LinearLayout
+        android:id="@+id/layToobar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#FAFBFB"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="10">
+
+        <ImageButton
+            android:id="@+id/btnDetailBack"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_detail_back_arrow" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="DETAIL CONTACT"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btnDetailEdit"
+            android:layout_width="0dp"
+            android:onClick="onClick"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_detail_pencil" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layToobar"
+        android:background="@drawable/shadow" />
+
+
+    <LinearLayout
+        android:id="@+id/layProfile"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layToobar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:weightSum="10">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="3">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btnDetailPhoto"
+                android:onClick="onClick"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center_vertical|left"
+
+                android:src="@drawable/contact_detail_empty_image" />
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:id="@+id/btnDetailAlbum"
+                android:onClick="onClick"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/contact_detail_edit_image" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txtDetailName"
+            android:layout_weight="6"
+            android:text="NAYONG KIM"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/btnDetailStar"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_detail_star_unselected"
+            android:text="Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layContact"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layProfile"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/box_gray_radius"
+            android:id="@+id/btnDetailCall1"
+            android:onClick="onClick"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_detail_call_blue" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="50dp" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnDetailMsg1"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:background="@drawable/box_gray_radius"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/contact_detail_message_blue" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="50dp" />
+
+        <ImageButton
+            android:id="@+id/btnDetailMail"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/box_gray_radius"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/contact_detail_mail_blue" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtCall"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/layContact"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Call"
+        android:textSize="14sp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/layCall"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/txtCall"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/box_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:id="@+id/btnDetailCall2"
+            android:onClick="onClick"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/contact_detail_phone_blue" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="3"
+            android:text="01022865413"
+            android:id="@+id/txtDetailCall"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:id="@+id/btnDetailMsg2"
+            android:onClick="onClick"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/contact_detail_message_gray" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtGroup"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/layCall"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Group Google - violenty"
+        android:textSize="14sp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/layGroup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/txtGroup"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/box_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <ImageButton
+            android:id="@+id/btnDetailGroup"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/contact_detail_group_gray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:id="@+id/txtDetailGroup"
+            android:layout_weight="4"
+            android:text="No Group"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/layBtmbar"
+        android:background="@drawable/shadow" />
+
+
+    <LinearLayout
+        android:id="@id/layBtmbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/btnDetailShare"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_detail_share" />
+
+
+        <ImageButton
+            android:id="@+id/btnDetailDelete"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_detail_delete" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
